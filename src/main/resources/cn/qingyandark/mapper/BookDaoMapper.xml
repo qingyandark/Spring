@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.qingyandark.mapper.BookDaoMapper">
+
+
+    <select id="getFirst" resultType="cn.qingyandark.dao.BookDao_1">
+        select * from tb_spring;
+    </select>
+</mapper>

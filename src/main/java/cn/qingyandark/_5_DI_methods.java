@@ -3,6 +3,8 @@ package cn.qingyandark;
 import cn.qingyandark.dao.BookDao_5;
 import cn.qingyandark.dao.impl.BookDaoImpl_5;
 import cn.qingyandark.service.BookService_5;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
