@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookDao_5" class="cn.qingyandark.dao.impl.BookDaoImpl_5"/>
+    <bean id="userDao_5" class="cn.qingyandark.dao.impl.UserDaoImpl_5"/>
+    <bean id="bookService_5" class="cn.qingyandark.service.impl.BookServiceImpl_5">
+        <property name="bookDao_5" ref="bookDao_5"></property>
+        <property name="userDao_5" ref="userDao_5"></property>
+    </bean>
+
+    <bean id="bookDao_5_2" class="cn.qingyandark.dao.impl.BookDaoImpl_5_2">
+        <property name="name" value="mysql"></property>
+        <property name="num" value="10"></property>
+    </bean>
+</beans>

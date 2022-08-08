@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    构造方法实例化bean-->
+    <bean id="bookDao2" class="cn.qingyandark.service.impl.BookServiceImpl_1"/>
+
+<!--    静态工厂 兼容早期代码-->
+    <bean id="bookDao3" class="cn.qingyandark.factory.BookDaoFactory_3" factory-method="getBookDao"/>
+
+<!--    实例工厂 先创建实例工厂的bean，再调用bean的构造方法-->
+<!--    <bean id="bookDaoFactory" class="cn.qingyandark.factory.BookDaoFactory_3_2"/>-->
+<!--    <bean id="bookDao4" factory-bean="bookDaoFactory" factory-method="getBookDao"/>-->
+    <bean id="bookDao5" class="cn.qingyandark.factory.BookDaoFactoryBean_3"/>
+
+</beans>

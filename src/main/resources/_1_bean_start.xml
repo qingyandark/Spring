@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--
+    配置bean
+    bean: statement声明
+    id: 名称，不可重
+    class: type
+    name: 别名，可以写多个，用','分割
+    scope: 是否为单例对象，singleton（单例对象，默认），prototype（非）
+        spring默认创建的是单例的对象，也就是说你调用的一直是同一个实例对象
+        默认单例：高效，便于管理
+        适合的bean：表现层、业务层、数据层、工具等对象
+        不适合：封装实体的域对象（do main等方法）
+-->
+    <bean id="bookDao" class="cn.qingyandark.dao.impl.BookDaoImpl_1" scope="singleton"/>
+    <bean id="bookService" class="cn.qingyandark.service.impl.BookServiceImpl_1">
+    <!--
+        配置Service与Dao的关系
+        property: 配置当前bean的属性
+        name: service中的变量名
+        ref: bean的名字
+    -->
+<!--    DI-->
+        <property name="bookDao" ref="bookDao"></property>
+    </bean>
+
+</beans>

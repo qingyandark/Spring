@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--声明周期函数配置-->
+<!--    <bean id="bookDao_4" class="cn.qingyandark.dao.impl.BookDaoImpl_1" init-method="init" destroy-method="destory"/>-->
+    <bean id="bookDao_4_2" class="cn.qingyandark.dao.impl.BookDaoImpl_4"/>
+<!--    <bean id="bookService_4" class="cn.qingyandark.service.impl.BookServiceImpl_1">-->
+<!--&lt;!&ndash;&lt;!&ndash;        <property name="bookDao" ref="bookDao_4"></property>&ndash;&gt;W&ndash;&gt;-->
+<!--    </bean>-->
+
+</beans>
